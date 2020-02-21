@@ -1,8 +1,10 @@
 .side-bar
-  .--header
-    .--top-items
-      .--name
-      .--icons
-        .__left
-        .__right
-  .content-groups
+  .side-bar--header
+    .side-bar--header--top-items
+      .side-bar--header--top-items--name write name
+      .side-bar--header--top-items--icons
+        = link_to "#", class:"side-bar--header--icons" do
+          = icon('far fa-edit', class:"make-group--icon__left")
+        = link_to "#", class: "side-bar--header--icons" do
+          = icon("fas fa-cog", class:"edit-profile--icon__right")
+  .side-bar--content-groups
