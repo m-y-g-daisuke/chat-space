@@ -17,9 +17,16 @@
         background-color: #333333;
         height: 20px;
         width: 100%;
-        padding: 0 20px;
-        .--name{}
-        .--icons{}
+        margin: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        .--name{
+          line-height: 20px;
+        }
+        .--icons{
+          width: 60px;
+          line-height: 20px;
+        }
       }
       
     }
