@@ -77,6 +77,38 @@
     background-color: #ffffff;
     height: 100px;
     border-bottom: solid #eeeeee 1px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    &__left-contents{
+      .top-items--group-name{
+        padding-top: 35px;
+        font-size: 20px;
+        color: #333333;
+      }
+      .top-items--members{
+        padding-top: 15px;
+        font-size: 12px;
+        color: #999999;
+      }
+
+    }
+    &__right-content{
+      width: 72px;
+      margin-top: 28px;
+      .top-items__edit-btn{
+        text-decoration: none;
+        color: #38aef0;
+        border: solid #38aef0 1px;
+        font-size: 16px;
+        height: 40px;
+        line-height: 40px;
+        width: 72px;
+        display: flex;
+        justify-content: center;
+      }
+
+    }
     }
     .contents{
       background-color: #fafafa;
