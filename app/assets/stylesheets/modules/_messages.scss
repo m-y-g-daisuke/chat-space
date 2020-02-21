@@ -107,12 +107,31 @@
         display: flex;
         justify-content: center;
       }
-
     }
     }
     .contents{
       background-color: #fafafa;
       height: calc(100% - 100px - 90px);
+      padding-left: 40px;
+      .message--info{
+        padding-top: 35px;
+        display:flex;
+        justify-content: flex-start;
+        &__name{
+          font-size: 16px;
+          color: #333333;
+        }
+        &__date{
+          margin-left: 10px;
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      .message--text{
+        margin: 12px 0px 46px;
+        font-size: 14px;
+        color: #434A54;
+      }      
     }
     .bottom-items{
       background-color: #d2d2d2;
