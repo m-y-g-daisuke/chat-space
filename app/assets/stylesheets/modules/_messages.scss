@@ -13,6 +13,8 @@
       width: 100%;
       display: flex;
       align-items: center;
+      position: fix;
+      top: 0px;
       &--top-items{
         color: #ffffff;
         height: 20px;
@@ -22,6 +24,8 @@
         justify-content: space-between;
         &--name{
           line-height: 20px;
+          font-size: 16px;
+          font-weight: bold;
         }
         &--icons{
           width: 60px;
@@ -44,11 +48,27 @@
         }
       }
     }
-    &--content-groups{
+    &--contents{
       background-color: #2f3e51;
-      height: calc(100% - 100px);
+      height: calc(100vh - 100px);
       width: 100%;
-    }  
+      color: #ffffff;
+      font-weight: bold;
+      &--groups-list{
+        padding: 20px 20px 40px 20px;
+        width: 100%;
+
+        .groups__name{
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+        .groups__message{
+          font-size: 11px;
+        }
+
+      }
+    } 
+    
   }
   .main-bar{
     height: 100vh;
