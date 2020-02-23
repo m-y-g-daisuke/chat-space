@@ -136,6 +136,54 @@
     .bottom-items{
       background-color: #d2d2d2;
       height: 90px;
+      padding: 20px 40px 20px 50px;
+      .message-box{
+        display: flex;
+        line-height: 50px;
+        height: 50px;
+        .message--input-box{
+          width: 100%;
+          display: flex;
+          background-color: #ffffff;
+          &__form{
+            width: 100%;
+            border-style: none;
+            height: 50px;
+            line-height: 50px;
+            .message__text-form{
+              .input--message{
+                border-style: none;
+                line-height: 50px;
+                width: 100%;
+                padding: 0 10px;
+              }
+            }
+          }
+          &__file{
+            position: relative;
+            height: 50px;
+            width: 50px;
+            padding-right: 10px;
+            .message__image-form{
+              position: absolute;
+              right: 15px;
+              font-size: 1.5em;
+            }
+          }
+          }
+        .message--submit-box{
+          margin-left: 15px;
+          .message--submit__label{
+            .message--submit__btn{
+               border-style: none;
+              background-color: #38aef0;
+              color: #ffffff;
+              height: 50px;
+              width: 100px;
+            }
+          }
+        }
+      }
     }
   }
 }
