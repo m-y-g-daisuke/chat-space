@@ -1,0 +1,26 @@
+.main-bar
+  .top-items
+    .top-items__left-contents
+      .top-items--group-name test
+      .top-items--members members
+    .top-items__right-content
+      =link_to "#", class:"top-items__edit-btn" do
+        Edit
+  .contents
+    .message--info
+      .message--info__name masa
+      .message--info__date 2020/02/21(FRI) 18:48:32
+    .message--text 今日は夜から雨
+  .bottom-items
+    %form{class:"message-box"}
+      .message--input-box
+        .message--input-box__form
+          %label{class:"message__text-form"}
+            %input{type: "text",placeholder:"type a message",class:"input--message"}
+        .message--input-box__file
+          %label{class: "message__image-form"}
+            = icon('far', 'image')
+            %input{type: "file",style:"display:none"}
+      .message--submit-box
+        %label{class:"message--submit__label"}
+          %input{type: "submit",value: "Send",class:"message--submit__btn"}
