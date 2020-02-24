@@ -1,9 +1,10 @@
 .side-bar
   .side-bar--header
     .side-bar--header--top-items
-      .side-bar--header--top-items__name namenamename
+      .side-bar--header--top-items__name
+        =current_user.name
       .side-bar--header--top-items__icons
-        = link_to "#", class: "side-bar--header-icons" do
+        = link_to edit_user_path(current_user), class: "side-bar--header-icons" do
           = icon("fas fa-cog", class:"edit-profile--icon__right")
         = link_to "#", class:"side-bar--header-icons" do
           = icon('far fa-edit', class:"make-group--icon__left")
