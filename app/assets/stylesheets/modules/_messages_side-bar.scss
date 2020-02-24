@@ -2,7 +2,7 @@
   height: 100vh;
   width: 300px;
   &--header{
-    background-color: #253141;
+    background-color: $side_blue_dark;
     height: 100px;
     width: 100%;
     display: flex;
@@ -43,7 +43,7 @@
     }
   }
   &--contents{
-    background-color: #2f3e51;
+    background-color: $side_blue_light;
     height: calc(100vh - 100px);
     width: 100%;
     color: $white;
