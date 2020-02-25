@@ -46,18 +46,19 @@
     background-color: $side_blue_light;
     height: calc(100vh - 100px);
     width: 100%;
-    color: $white;
     font-weight: bold;
     &--groups-list{
       padding: 20px 20px 40px 20px;
       width: 100%;
-
+      
       .groups__name{
         font-size: 15px;
         margin-bottom: 5px;
+        color: $white;
       }
       .groups__message{
         font-size: 11px;
+        color: $white;
       }
     }
   }   
