@@ -9,6 +9,10 @@
         = link_to new_group_path, class:"side-bar--header-icons" do
           = icon('far fa-edit', class:"make-group--icon__left")
   .side-bar--contents
-    .side-bar--contents--groups-list
-      .groups__name techchamp
-      .groups__message まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side-bar--contents--groups-list
+        =link_to "#" do
+          .groups__name
+            =group.name
+          .groups__message
+            no message
