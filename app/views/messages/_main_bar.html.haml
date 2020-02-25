@@ -1,21 +1,21 @@
 .main-bar
   .top-items
     .top-items__left-contents
-      .top-items--group-name test
+      .top-items--group-name group
       .top-items--members members
     .top-items__right-content
-      =link_to "#", class:"top-items__edit-btn" do
+      =link_to edit_group_path(current_user.groups), class:"top-items__edit-btn" do
         Edit
   .contents
-    .message--info
-      .message--info__name masa
-      .message--info__date 2020/02/21(FRI) 18:48:32
-    .message--text 今日は夜から雨
+    =render @messages
   .bottom-items
     =form_for [@group, @message] do |f|
-      =f.text_field :content, class: "message--input-box__form", placeholder:"type a message"
-      .message--input-box__file
-        =f.label :image, class: "message__image-form"
-        = icon('fas', 'image',class:"icon")
-          = f.file_field :image, class:"hidden"
-      = f.submit "Send", class:"message--submit-btn"
+      .message-box
+        .message--input-box
+          =f.text_field :content, class: "message--input-box__form", placeholder:"type a message"
+        .message--input-box__file
+          =f.label :image, class: "message--input-box__file" do
+            = icon('fas', 'image',class:"icon")
+            = f.file_field :image, class:"hidden"
+        .message--submit-box
+          =f.submit "Send", class: "message--submit__btn"
