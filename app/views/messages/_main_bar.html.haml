@@ -1,10 +1,14 @@
 .main-bar
   .top-items
     .top-items__left-contents
-      .top-items--group-name group
-      .top-items--members members
+      .top-items--group-name 
+      =@group.name
+      .top-items--members
+        Member:
+        -@group.users.each do|group_user|
+          =group_user.name
     .top-items__right-content
-      =link_to edit_group_path(current_user.groups), class:"top-items__edit-btn" do
+      =link_to "/groups/#{@group.id}/edit", class:"top-items__edit-btn" do
         Edit
   .contents
     =render @messages
