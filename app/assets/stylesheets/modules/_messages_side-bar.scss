@@ -50,15 +50,17 @@
     &--groups-list{
       padding: 20px 20px 40px 20px;
       width: 100%;
-      
-      .groups__name{
-        font-size: 15px;
-        margin-bottom: 5px;
-        color: $white;
-      }
-      .groups__message{
-        font-size: 11px;
-        color: $white;
+      .side-bar__list{
+        text-decoration: none;
+        .groups__name{
+          font-size: 15px;
+          margin-bottom: 5px;
+          color: $white;
+        }
+        .groups__message{
+          font-size: 11px;
+          color: $white;
+        }
       }
     }
   }   
