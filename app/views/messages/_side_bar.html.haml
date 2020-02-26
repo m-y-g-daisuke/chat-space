@@ -11,8 +11,8 @@
   .side-bar--contents
     - current_user.groups.each do |group|
       .side-bar--contents--groups-list
-        =link_to "#" do
+        =link_to group_messages_path(group), class:"side-bar__list" do
           .groups__name
             =group.name
           .groups__message
-            no message
+            =group.show_last_message

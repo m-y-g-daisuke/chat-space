@@ -77,37 +77,38 @@
           border-style: none;
           height: 50px;
           line-height: 50px;
+          padding: 0 10px;
           .message__text-form{
             .input--message{
               border-style: none;
               line-height: 50px;
               width: 100%;
-              padding: 0 10px;
             }
           }
         }
         &__file{
           position: relative;
-          height: 50px;
-          width: 50px;
-          padding-right: 10px;
-          .message__image-form{
+          width: 0;
+          height: 0;
+          padding-right: 15px;
+          .icon{
             position: absolute;
-            right: 15px;
+            right: 28px;
+            top: -4px;
             font-size: 1.5em;
+          }
+          .hidden{
+            display: none;
           }
         }
         }
       .message--submit-box{
-        margin-left: 15px;
-        .message--submit__label{
-          .message--submit__btn{
-            border-style: none;
-            background-color:$light_blue ;
-            color:$white;
-            height: 50px;
-            width: 100px;
-          }
+        .message--submit__btn{
+          border-style: none;
+          background-color:$light_blue ;
+          color:$white;
+          height: 50px;
+          width: 100px;
         }
       }
     }
