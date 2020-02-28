@@ -50,6 +50,7 @@ $(function(){
       var html = buildHTML(data);
       $(".contents").append(html);
       $("form")[0].reset();
+      $('.contents').animate({ scrollTop: $('.contents')[0].scrollHeight});
     })
   })
 })
