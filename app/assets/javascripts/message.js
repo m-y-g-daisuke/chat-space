@@ -15,8 +15,8 @@ $(function(){
           <div class="message--text">
             ${message.content}
           </div>
-          <img class="message--image" ${message.image} >
-        </div>` //メッセージに画像が含まれる場合のHTMLを作る
+            <img class="message--image" src=${message.image} >
+        </div>` 
     } else {
       var html = 
         `<div class="message--info">
@@ -29,7 +29,7 @@ $(function(){
         </div>
         <div class="message--text"> 
           ${message.content}
-        </div>`//メッセージに画像が含まれない場合のHTMLを作る
+        </div>`
     }
     return html
   }
