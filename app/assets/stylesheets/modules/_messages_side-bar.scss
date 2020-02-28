@@ -47,6 +47,7 @@
     height: calc(100vh - 100px);
     width: 100%;
     font-weight: bold;
+    overflow: scroll;
     &--groups-list{
       padding: 20px 20px 40px 20px;
       width: 100%;
