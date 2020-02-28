@@ -51,6 +51,7 @@ $(function(){
       $(".contents").append(html);
       $("form")[0].reset();
       $('.contents').animate({ scrollTop: $('.contents')[0].scrollHeight});
+      $(".message--submit__btn").prop("disabled",false);
     })
   })
 })
