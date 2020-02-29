@@ -82,6 +82,7 @@ $(function(){
     .fail(function() {
       alert('error');
     });
+    setInterval(reloadMessages, 7000);
   };
 
   $("#new_message").on("submit", function(e){
