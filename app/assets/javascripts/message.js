@@ -2,9 +2,9 @@ $(function(){
   
   
   function buildHTML(message){
-    if (message.image) {
+    if (message.content && message.image) {
       var html =
-      `<div class="message" data-message-id=${message.id}>
+      `<div class="message" data-message-id=${message.id} ${message.id}>
         <div class="message--info">
           <div class="message--info__name">
             ${message.user_name}
@@ -20,9 +20,9 @@ $(function(){
           <img class="message--image" src=${message.image} >
         </div>
       </div>` 
-    } else {
+    } else if (message.content){
       var html = 
-      `<div class="message" data-message-id=${message.id}>
+      `<div class="message" data-message-id=${message.id} ${message.id}>
         <div class="message--info">
           <div class="message--info__name">
             ${message.user_name}
@@ -31,8 +31,25 @@ $(function(){
             ${message.created_at}
           </div>
         </div>
-        <div class="message--text"> 
-          ${message.content}
+        <div class="message--posts">
+          <div class="message--text">
+            ${message.content}
+          </div>
+        </div>
+      </div>`
+    } else{
+      var html =
+      `<div class="message" data-message-id=${message.id} ${message.id}>
+        <div class="message--info">
+          <div class="message--info__name">
+            ${message.user_name}
+          </div>
+          <div class="message--info__date">
+            ${message.created_at}
+          </div>
+        </div>
+        <div class="message--posts">
+          <img class="message--image" src=${message.image} >
         </div>
       </div>`
     }
@@ -52,8 +69,7 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
-      console.log('success');
-    })
+      
     .fail(function() {
       alert('error');
     });
