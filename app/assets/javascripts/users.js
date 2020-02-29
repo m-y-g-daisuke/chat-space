@@ -43,4 +43,9 @@ $(function(){
       alert("通信エラーです。ユーザーが表示できません");
     });
   });
+
+  $(document).on("click",".chat-group-user__btn--add", function(){
+    console.log("a")
+  });
+
 });
