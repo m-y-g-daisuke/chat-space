@@ -1,9 +1,11 @@
 $(function(){
-
+  
+  
   function buildHTML(message){
     if (message.image) {
       var html =
-       `<div class="message--info">
+      `<div class="message" data-message-id=${message.id}>
+        <div class="message--info">
           <div class="message--info__name">
             ${message.user_name}
           </div>
@@ -15,11 +17,13 @@ $(function(){
           <div class="message--text">
             ${message.content}
           </div>
-            <img class="message--image" src=${message.image} >
-        </div>` 
+          <img class="message--image" src=${message.image} >
+        </div>
+      </div>` 
     } else {
       var html = 
-        `<div class="message--info">
+      `<div class="message" data-message-id=${message.id}>
+        <div class="message--info">
           <div class="message--info__name">
             ${message.user_name}
           </div>
@@ -29,10 +33,31 @@ $(function(){
         </div>
         <div class="message--text"> 
           ${message.content}
-        </div>`
+        </div>
+      </div>`
     }
     return html
   }
+  
+  var reloadMessages = function() {
+    //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
+    var last_message_id = $('.message:last').data("message-id");
+    $.ajax({
+      //ルーティングで設定した通り/groups/id番号/api/messagesとなるよう文字列を書く
+      url: "api/messages",
+      //ルーティングで設定した通りhttpメソッドをgetに指定
+      type: 'get',
+      dataType: 'json',
+      //dataオプションでリクエストに値を含める
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      console.log('success');
+    })
+    .fail(function() {
+      alert('error');
+    });
+  };
 
   $("#new_message").on("submit", function(e){
     e.preventDefault();
