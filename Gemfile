@@ -59,7 +59,7 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'devise'
 gem 'fog-aws'
 gem 'font-awesome-sass'
